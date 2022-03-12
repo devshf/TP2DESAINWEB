@@ -1,0 +1,181 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 25em) minmax(auto, 25em) 1fr; 
+}
+
+.main-content, .more-content, .grid-3 ul {
+    display: grid;
+    grid-column: 2/4;
+}
+
+.grid2 {
+    display: grid;
+    grid-column: span 2;
+    grid-gap: 10px;
+}
+
+
+body {
+    margin: 0;
+}
+
+img{
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+body, textarea{
+    color: black;
+    font-family: 'Helvetica', Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1,h2,h3{
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+    padding: 1em 0;
+}
+
+p{
+    margin: 0;
+    padding: 1em 0;
+    font-size: 14pt;
+}
+
+
+.logo {
+    font-size: 6em;
+    text-align: center;
+}
+
+.site-title{
+    color: #203941;
+    padding: 0;
+    padding-bottom: 1em;
+    font-size: 29pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* bagian main */
+
+.main {
+    background: white;
+    padding-bottom: 2em;
+}
+
+.main-content {
+    padding: 1.5em;
+
+}
+
+@media screen and (min-width: 600px) {
+    .main-text {
+        columns: 2;
+        column-gap: 4em;
+}
+
+    .main-text p {
+        padding-top: 0;
+    }
+}
+
+/* bagian grid 3 */
+
+.grid-3 {
+    padding: 2em 1em 1em;
+    background: #203941;
+}
+
+.grid-3 ul {
+    margin: 0;
+    padding: 0;
+    padding-right: 2em; 
+}
+
+.grid-3 li {
+    margin-bottom: 1em;
+    background: white;
+    list-style-type: none;
+}
+.grid-3 ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-3 li {
+    width: 31%;
+}
+
+
+.grid3{
+    padding: 1.5em;
+}
+
+
+
+/* bagian grid2 */
+
+.grid2 {
+    padding: 4em;
+    background: #1a442a;
+    color: white;
+}
+
+.grid2:last-of-type {
+    background: #b38900;
+}
+
+
+@supports not (display: grid) {
+.grid{
+    display: grid;
+    max-width: 50em;
+    margin: 0 auto;
+}
+}
+
+.container{
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: 500px auto;
+    grid-gap: 10px;
+    padding: 0;
+    background: white;
+    color: black;
+    align-items: center;
+
+}
+
+.detail p{
+    align-items: center;
+    text-align: center;
+}
+
+.detail img{
+    width: 250px;
+    height: 100px;
+}
+
+.container > div{
+    background-color: white;
+}
+
+footer{
+    width: auto;
+    height: 80px;
+    padding: 5px;
+    font-size: 20pt;
+    background-color: #932503;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
